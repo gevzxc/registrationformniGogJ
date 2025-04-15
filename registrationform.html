@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #fff;
+      max-width: 500px;
+      width: 100%;
+      padding: 30px 35px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: border 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #2980b9;
+      outline: none;
+    }
+
+    .gender {
+      margin: 10px 0;
+    }
+
+    .gender label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .checkbox {
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .checkbox input {
+      margin-right: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .note {
+      font-size: 12px;
+      color: #7f8c8d;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" name="confirm" required>
+
+      <label>Gender</label>
+      <div class="gender">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+
+      <label for="birthdate">Birthdate</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
+        <option value="">Select your country</option>
+        <option value="ph">Philippines</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="jp">Japan</option>
+        <option value="ca">Canada</option>
+      </select>
+
+      <div class="checkbox">
+        <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit">Register</button>
+      <div class="note">Already have an account? <a href="#" style="color:#2980b9;">Login</a></div>
+    </form>
+  </div>
+
+</body>
+</html>
